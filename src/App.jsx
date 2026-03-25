@@ -1,11 +1,18 @@
  
-import './App.css'
+import './App.css' 
+import { Outlet } from "react-router-dom";  
+import Nav from "./components/Nav";
+
 
 function App() { 
 
   return (
-    <>
-       <h1>React</h1>
+    <> 
+    <Nav />
+      <main className="container">  
+          {/* Child routes will render here */}
+          <Outlet /> 
+      </main>
     </>
   )
 }
